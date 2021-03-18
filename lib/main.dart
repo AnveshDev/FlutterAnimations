@@ -3,10 +3,12 @@ import 'package:flutter_app/color_animation.dart';
 import 'package:flutter_app/text_style_animation.dart';
 import 'package:flutter_app/third_party.dart';
 
+import 'dynamic_data_screen.dart';
 import 'exp_four.dart';
 import 'exp_one.dart';
 import 'exp_three.dart';
 import 'exp_two.dart';
+import 'listviewpositions.dart';
 import 'transform_animation.dart';
 
 void main() {
@@ -112,6 +114,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 return  SwipeAnimation();
                }));
              }, child: Text('Swipe Animation')),
+             ElevatedButton(onPressed: (){
+               Navigator.push(context, MaterialPageRoute(builder: (context){
+                return  ScrollablePositionedListPage();
+               }));
+             }, child: Text('Dynamic data')),
            ],
          ),
        ),
