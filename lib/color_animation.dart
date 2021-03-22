@@ -31,13 +31,14 @@ class _ColorAnimationState extends State<ColorAnimation>
 
   @override
   Widget build(BuildContext context) {
+    Size _size=MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
         color: Colors.white,
         child: Center(
           child: Container(
-            height: 100,
-            width: 100,
+            height: _size.height,
+            width: _size.width,
             color: _animation.value,
           ),
         ),
