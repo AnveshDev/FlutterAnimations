@@ -64,11 +64,17 @@ class _WebSiteOneScreenState extends State<WebSiteOneScreen>
   bool _loading=false;
 
   //HTTP REQ
+  Map<String, String> get headers => {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "Access-Control-Allow-Origin": "*"
+  };
   Future<List<SearchProfilesModel>> _getSearchDetails() async {
     setState(() {
       _loading=true;
     });
-    var response = await http.get('http://192.168.108.31:91/user/GeneralSearchgender=f&age_from=20&age_to=25&religion=2');
+
+    var response = await http.get('http://192.168.108.31:91/user/GeneralSearchgender=f&age_from=20&age_to=25&religion=2',headers: headers );
     if (response.statusCode == 200) {
       var myJson = json.decode(response.body);
       Iterable list = myJson;

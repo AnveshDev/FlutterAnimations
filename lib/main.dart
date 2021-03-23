@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/color_animation.dart';
+import 'package:flutter_app/provider_example.dart';
 import 'package:flutter_app/text_style_animation.dart';
 import 'package:flutter_app/third_party.dart';
 import 'package:flutter_app/web_site_one.dart';
@@ -122,6 +123,11 @@ class _MyHomePageState extends State<MyHomePage> {
                     return  ScrollablePositionedListPage();
                    }));
                  }, child: Text('Dynamic data')),
+                 ElevatedButton(onPressed: (){
+                   Navigator.push(context, MaterialPageRoute(builder: (context){
+                     return  MainMultiProvider();
+                   }));
+                 }, child: Text('Provider Basic')),
                  ElevatedButton(onPressed: (){
                    Navigator.push(context, MaterialPageRoute(builder: (context){
                      return  WebSiteOneScreen();
