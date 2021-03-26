@@ -42,7 +42,7 @@ class _IncrementCountDataState extends State<IncrementCountData> {
 
               ElevatedButton(onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context){
-                  return  CounterSecondScreen();
+                  return  Consumercart();
                 }));
               }, child: Text('Counter Second'))
             ],
